@@ -148,19 +148,74 @@ You will need to use list methods to remove coffee types once they are dispensed
 
 """    
 
-coffee_reservoir = 10 # Amount of water in my coffee machine
+# coffee_reservoir = 10 # Amount of water in my coffee machine
 
-coffee_types =["Espresso", "Cappuccino", "Latte", "Americano", "Mocha"] # List of coffee types
+# coffee_types =["Espresso", "Cappuccino", "Latte", "Americano", "Mocha"] # List of coffee types
 
-while coffee_reservoir > 0: # As long as water is over 0 this will run
-    if coffee_types: # Here we are checking if there is something in our coffee_types list
-        current_coffee = coffee_types.pop(0) #pop is removing the item from the list and we are also using current_coffee
-        # for the one item in our next print statement
-        print(f"Dispensing {current_coffee}.")
+# while coffee_reservoir > 0: # As long as water is over 0 this will run
+#     if coffee_types: # Here we are checking if there is something in our coffee_types list
+#         current_coffee = coffee_types.pop(0) #pop is removing the item from the list and we are also using current_coffee
+#         # for the one item in our next print statement
+#         print(f"Dispensing {current_coffee}.")
 
-        coffee_reservoir -= 1 # Each time we select a coffee type we reduce our reservoir variable by 1
-        print(f"Coffee types left: {coffee_types}")
-    else:
-        print("no more coffeee types available.")
-        break # if we don't have a break this will keep printing constantly.
-print("The coffee reservoir is empty")
+#         coffee_reservoir -= 1 # Each time we select a coffee type we reduce our reservoir variable by 1
+#         print(f"Coffee types left: {coffee_types}")
+#     else:
+#         print("no more coffeee types available.")
+#         break # if we don't have a break this will keep printing constantly.
+# print("The coffee reservoir is empty")
+
+"""
+Exercise 5: The Intelligent Elevator System
+
+You are designing an intelligent elevator system. The elevator has a list of floors where passengers have requested stops.
+Write a 'while' loop that starts from the top floor and stops at each requested floor until it reaches the ground floor.
+
+Here are the tasks you need to perform:
+
+1. Initialize a variable for the starting floor.
+2. Create a list of floors where passengers have requested stops.
+3. Use a 'while' loop to move the elevator down floor by bloor.
+4. Inside the loop, use the membership operator to check if hte current floor is in the list of requested stops.
+5. If the current floor is a requested stop, print a message and remove that floor from the list.
+6. Continue moving down until the ground floor is reached. 
+7. Print a message each time the elevator moves down a floor and when it reaches the ground floor.
+
+**hint**:
+You will need to use list methods to remove floors from the list once they are visited.
+"""
+
+# current_floor = 5
+
+# requested_stops = [1,3,4]
+
+# while current_floor > 0:
+#     if current_floor in requested_stops:
+#         print(f"Stopping at floor {current_floor}")
+#         requested_stops.remove(current_floor)
+#     current_floor -= 1 #we want this out of the if statement so it can run well
+#     print(f"Descending to floor {current_floor}.")
+
+"""
+Create a list of colors representing the traffic light sequence.
+Initialize a counter for the green light
+Use an infinite while loop to cycle through the traffic light colors.
+Inside the loop, use the count method to track the number of times 'green' appears
+Break the loop when the green light has appeared a specific number of times.
+Print a message each time the oight changes and when the loop breaks for maintenance"""
+
+# traffic_lights = ['red', 'yellow', 'green', 'yellow']
+# green_count = 0
+
+# while True:
+#     for color in traffic_lights:
+#         print(f"The traffic light is now {color}.")
+#         if color == 'green':
+#             green_count += 1
+#             if green_count == 3:
+#                 print("maintenance time! The cycle will stop.")
+#                 break
+
+#     if green_count == 3:
+#         break
+
