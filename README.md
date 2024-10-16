@@ -1,0 +1,1 @@
+This is my journey through coding temple and the notes I took when going through this curriculum. Also some of the equations I solved myself but was luckly enough to comment on sections I didn't understand well.
