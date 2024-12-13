@@ -81,6 +81,35 @@ filter out invalid ones, and compile a list of valid email addresses for hte cam
 
 import re
 
+def validate_email(email):
+    pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-0.-]+\.[a-zA-Z]{2,}$" # we are using the ^ to specify the very begining now were targeting a-z A-Z and 0-9 followed by the @ then we do 
+    # the same thing again searching for a-z A-Z 0-9 
+    if re.match(pattern, email):
+        return True
+    else:
+        return False
+    
+def process_emails(email_list):
+    valid_emails = [] 
+    invalid_emails = []
+    for email in email_list: # here we are looping through email in email_list
+        try:
+            if validate_email(email): #we will check if validate email is true if it is we are going to append it to our valid email list
+                valid_emails.append(email)
+            else:
+                invalid_emails.append(email) # if it isn't it will be append to invalid emails
+        except Exception as e:
+            print(f"Error processing email {email}: {e}")
+    return valid_emails, invalid_emails
+
+# sample list of email addresses
+email_list = ["user@example.com", "invalid-email.com", "contact@company.org", "name@domain", "info@exmaple.net"]
+
+# Processing and dispalying email addresses
+valid, invalid = process_emails(email_list)
+print("Valid Emails:", valid)
+print("Invalid emails:", invalid)
+
 
 
 
