@@ -330,17 +330,27 @@ number of times, with each repetition separated by a dash ('-').
 
 """
 
-def repeate_message(message, times):
-    return '-'.join([message] * times)
+# def repeate_message(message, times):
+#     return '-'.join([message] * times)
 
-while True:
-    user_message = input("Enter the message you want to repeate: ")
-    repeat_count = int(input("How many times would you like to repeat it? "))
+# while True:
+#     user_message = input("Enter the message you want to repeate: ")
+#     repeat_count = int(input("How many times would you like to repeat it? "))
 
-    repeated_message = repeate_message(user_message, repeat_count)
+#     repeated_message = repeate_message(user_message, repeat_count)
 
-    print(f"Repeated message: {repeated_message}")
+#     print(f"Repeated message: {repeated_message}")
 
-    continue_input = input("Would you like to create another repeated message? (yes/no): ").lower()
-    if continue_input != 'yes':
-        break
+#     continue_input = input("Would you like to create another repeated message? (yes/no): ").lower()
+#     if continue_input != 'yes':
+#         break
+
+def find_odd_occurrence(arr):
+    result = 0
+    print(result)
+    for num in arr:
+        result ^= num
+        print(num)
+    return result
+
+find_odd_occurrence([1,2,2,3,3,3,4,3,3,3,2,2,1])
