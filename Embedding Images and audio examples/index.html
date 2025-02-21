@@ -1,0 +1,28 @@
+<!-- Profile picture -->
+ <img src="profile.jpg" alt="Professional profile picture of your name">
+ <!-- Src is the location of the picture you're trying to display if it was in a different
+  folder you would do foldername/profile.jpg-->
+<!-- Alt is the message that would display in the event if the src does not display-->
+
+<!-- Podcast Section -->
+<h2>Podcast Features</h2>
+<audio controls> <!-- Controls allows us to be able to give the user a playback control
+    so rewind pause etc.-->
+    <source src="birds-ambient.mp3" type="audio/mpeg">
+    Your browser does not support audio element.
+</audio>
+
+<!-- Embedding videos-->
+<h3>Project Highlights</h3>
+<video width="320" height="240" controls>
+    <source src="ct-waiting-room-video.mp4" type="video/mp4">
+    Your browswer does not spport the video tag.
+</video>
+
+<!--Integrating youtube videos -->
+<h4>Tutorials and talks</h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+    frameborder="0" allow="accelerometere; autoplay; clipboard-write; encrypted-media;gyroscope; picture-in-picture"
+    allowfullscreen>
+    <!-- allow lets us specify a feature policy for the iframe-->
+</iframe>
